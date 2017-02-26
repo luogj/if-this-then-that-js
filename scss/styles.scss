@@ -1,0 +1,66 @@
+$white: #fff;
+$purple: #563d7c;
+$grey: #f9f9f9;
+$medium-screen: 768px;
+
+/* Global */
+.vertical-center {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+}
+
+/* For Glyphicons */
+.bs-glyphicons {
+    margin: 0 -10px 20px;
+    overflow: hidden;
+
+    @media (min-width: $medium-screen) {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .bs-glyphicons-list {
+        padding-left: 0;
+        list-style: none;
+
+        li {
+            &:hover {
+                color: $white;
+                background-color: $purple;
+            }
+
+            float: left;
+            width: 100%; // Show only one list item when screen size is small
+            height: 100px;
+            padding: 10px;
+            font-size: 12px;
+            line-height: 1.4;
+            text-align: center;
+            background-color: $grey;
+            border: 5px solid $white;
+
+            // Controls the number of list items to show in a row
+            @media (min-width: $medium-screen) {
+                width: 25%;
+            }
+
+            .glyphicon {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                font-size: 24px;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            // Text under glyphicon
+            .glyphicon-class {
+                display: block;
+                text-align: center;
+                word-wrap: break-word;
+            }
+        }
+    }
+
+}
